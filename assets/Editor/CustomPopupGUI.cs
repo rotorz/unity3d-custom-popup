@@ -122,16 +122,16 @@ namespace Rotorz.Games.UnityEditorExtensions
         /// public static int SortingLayerPopup(Rect position, GUIContent label, int sortingLayerID)
         /// {
         ///     string sortingLayerName = SortingLayer.IDToName(sortingLayerID);
-        ///     var valueLabel = ExtraEditorGUI.TempContent(sortingLayerName);
-        ///
-        ///     return CustomPopupGUI.Popup(position, label, sortingLayerID, valueLabel, context => {
-        ///         var popup = context.Popup;
-        ///         foreach (var layer in SortingLayer.layers) {
-        ///             popup.AddCommand(layer.name)
-        ///                 .Checked(() => layer.id == context.CurrentValue)
-        ///                 .Action(() => context.NotifySelection(layer.id));
-        ///         }
-        ///     });
+        ///     using (var valueLabel = ControlContent.Basic(sortingLayerName)) {
+        ///         return CustomPopupGUI.Popup(position, label, sortingLayerID, valueLabel, context => {
+        ///             var popup = context.Popup;
+        ///             foreach (var layer in SortingLayer.layers) {
+        ///                 popup.AddCommand(layer.name)
+        ///                     .Checked(() => layer.id == context.CurrentValue)
+        ///                     .Action(() => context.NotifySelection(layer.id));
+        ///             }
+        ///         });
+        ///     }
         /// }
         /// ]]></code>
         /// </example>

@@ -18,13 +18,13 @@ Here is a basic example of implementing a custom popup control:
 public static int SortingLayerPopup(Rect position, GUIContent label, int sortingLayerID)
 {
     string sortingLayerName = SortingLayer.IDToName(sortingLayerID);
-    var valueLabel = ExtraEditorGUI.TempContent(sortingLayerName);
-
-    return CustomPopupGUI.Popup(position, label, sortingLayerID, valueLabel, context => {
-        foreach (var layer in SortingLayer.layers) {
-            context.Popup.AddOption(layer.name, context, layer.id);
-        }
-    });
+    using (var valueLabel = ControlContent.Basic(sortingLayerName)) {
+        return CustomPopupGUI.Popup(position, label, sortingLayerID, valueLabel, context => {
+            foreach (var layer in SortingLayer.layers) {
+                context.Popup.AddOption(layer.name, context, layer.id);
+            }
+        });
+    }
 }
 
 public static int SortingLayerPopup(GUIContent label, int sortingLayerID)
