@@ -4,7 +4,7 @@ Custom popup control for Unity editor interfaces that defers popup menu construc
 shown. This is good for situations where the popup is relatively expensive to construct.
 
 ```sh
-$ npm install rotorz/unity3d-custom-popup
+$ npm install --save rotorz/unity3d-custom-popup
 ```
 
 This package is compatible with [unity3d-package-syncer](https://github.com/rotorz/unity3d-package-syncer).
