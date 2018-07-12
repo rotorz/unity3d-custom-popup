@@ -17,6 +17,6 @@
     "unity3d-package"
   ],
   "dependencies": {
-    "@rotorz/unity3d-editor-menu": "github:rotorz/unity3d-editor-menu#semver:^1.0.0"
+    "@rotorz/unity3d-editor-menu": "github:rotorz/unity3d-editor-menu#semver:^1.0.1"
   }
 }
