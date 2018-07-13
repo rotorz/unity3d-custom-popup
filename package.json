@@ -1,6 +1,6 @@
 {
   "name": "@rotorz/unity3d-custom-popup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom popup control for Unity editor interfaces that defers popup menu construction until shown. This is good for situations where the popup is relatively expensive to construct.",
   "main": "index.js",
   "scripts": {
