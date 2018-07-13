@@ -2,5 +2,11 @@
     "name": "rotorz.unity3d-custom-popup.editor",
     "references": [
         "rotorz.unity3d-editor-menu.editor"
-    ]
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
 }
